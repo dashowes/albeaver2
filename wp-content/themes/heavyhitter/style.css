@@ -1,0 +1,476 @@
+/*
+Theme Name: Heavy Hitter
+Author: jchowes
+Author URI: http://jchowes.com;
+Description: Pretty good stuff.
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: Light, Responsive
+*/
+
+/* Reset */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+/*End of Reset */
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+
+/* apply a natural box layout model to all elements */
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+ }
+
+body {
+    background: #eaebed;
+    color:#2e2e33;
+    font-family: 'Arial Black', sans-serif;
+    font-weight: 400;
+    line-height: 140%;
+    font-size: 0.875em;
+}
+
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf {
+    *zoom: 1;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.content-wrapper img {width:100%;}
+.content-wrapper img.wp-smiley {width: auto;}
+
+.mobile-only {
+    display: block;
+}
+
+.desktop-only {
+    display: none;
+}
+
+#page-header {
+  background: #f1f2f3;
+}
+
+.mob-menu {
+    display: none;
+    clear: both;
+}
+
+.menu-trigger {
+    cursor: pointer;
+    font-weight: 600;
+    letter-spacing: 2px;
+    background:url('images/hamburger4.png') no-repeat right top;
+    background-size: 30px;
+    font-size: 1.25em;
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+}
+
+#page-header .mobile-only.align-right {margin-top: 7px;}
+
+#top-nav {
+  margin: 30px -20px -20px;
+  text-transform: uppercase;
+}
+
+#top-nav li {
+    display: block;
+    background: #f1f2f3;
+    font-family: 'Arial Black', sans-serif;
+    letter-spacing: 3px;
+    font-size: 1.125em;
+}
+
+#top-nav a {
+    text-decoration: none;
+    color: #2e2e33;
+    display: block;
+    padding: 10px 10px;
+}
+
+#top-nav a:hover {color: #7a77ff;}
+
+#page-footer {
+  font-size: 0.875em;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+a {color: #c2c3c4;}
+
+h1, h2, h3, h4 {font-family: 'Arial Black', sans-serif;}
+
+h1 {
+    font-size: 4em;
+    font-weight: 700;
+    line-height: 120%;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    line-height: 120%;
+}
+
+h3, h4 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    line-height: 120%;
+    text-transform: uppercase;
+}
+
+p {
+    margin-bottom: 20px;
+    line-height: 160%;
+    font-size: 2.25em;
+}
+
+p.small {
+    font-size: 1.15em;
+}
+
+blockquote {
+    margin-left: 20px;
+    border-left: solid 5px #65ac0e;
+    padding-left: 20px;
+    margin-bottom: 20px;
+    font-style: italic;
+    line-height: 120%;
+    font-family: 'Arial Black', sans-serif;
+    font-weight: 400;
+}
+
+article.article-wrap ul {margin: 20px 40px;}
+article.article-wrap li {
+    list-style-type: disc;
+    line-height: 160%;
+    font-size: 1.5em;
+}
+
+/*article.article-wrap p:nth-of-type(1) {
+    font-family: 'Arial Black', sans-serif;
+    font-size: 2em;
+    line-height: 110%;
+    margin-top: .75em;
+}*/
+
+h2.big {
+    font-size: 3.5em;
+    font-weight: bold;
+    color: #7a77ff;
+}
+
+h2.notasbig {
+    font-size: 3.3em;
+    font-weight: bold;
+    color: #2e2e33;
+}
+
+.strike {text-decoration: line-through;}
+
+.align-right {text-align: right;}
+.align-center {text-align: center;}
+
+.force-block {display: block;}
+
+.pad20 {padding: 20px;}
+.pad20tb {
+    padding-top:20px;
+    padding-bottom: 20px;
+}
+
+.no-margin-bottom {margin-bottom: 0;}
+
+article {
+    margin: 0 auto;
+    max-width: 75em;
+}
+
+.inner-wrap {
+    clear: both;
+    margin: 0 auto;
+}
+
+.lightbg {
+    background: #c2c3c4;
+    color: #2e2e33;
+}
+
+.lightbg h1 {
+    color: #fc2f68;
+}
+
+.darkbg {
+    background: #2e2e33;
+    color: #f1f2f3;
+}
+
+.darkbg a {
+    color: #eaebed;
+    text-decoration: none;
+}
+
+.darkbg a:hover {
+    color: #7a77ff;
+}
+
+.medbg {
+    background: #f2c6dd;
+    color: #2e2e33;
+}
+
+.fade25 {opacity: 0.25;}
+
+.hero {
+    border-top: solid 5px #ddd;
+    border-bottom: solid 5px #ddd;
+}
+
+.float-left {
+    float: left;
+    margin-right: 1em;
+}
+
+.outline {
+    padding: 0.25em;
+    border: solid 1px #dddddd;
+    background: #ffffff;
+}
+
+a.button {
+    background: #000000;
+    color: #ffffff;
+    text-decoration: none;
+    display: block;
+    width: 30%;
+    margin: 0 auto 2em;
+    padding: 1em 4em;
+    border-radius: 0.5em;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.25em;
+}
+
+a.button:hover {
+    background: #7a77ff;
+}
+
+.divider {
+    margin: 40px 0;
+    border-top:solid 1px #dddddd;
+}
+
+.article-excerpt {margin-bottom: 40px;}
+
+.article-excerpt h2 {
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.article-excerpt h2 a,
+.moretag {
+    text-decoration: none;
+}
+
+.alignleft{text-align: left;}
+.alignright{text-align: right;}
+.aligncenter{text-align: center;}
+
+img.alignleft{
+    float: left;
+    margin-right: 20px;
+}
+img.alignright{
+    float: right;
+    margin-left: 20px;}
+img.aligncenter{
+    display: block;
+    margin: 0 auto;
+}
+
+#blog-pager span {display: block;}
+#blog-pager span.left {float:left;}
+#blog-pager span.right {float:right;}
+
+
+
+
+/* Media queries! */
+
+@media screen and (min-width: 801px) {
+
+.mobile-only {
+    display: none;
+}
+
+.desktop-only {
+    display: block;
+}
+
+.content-wrapper img {width:auto;}
+
+#page-header {padding-bottom: 2em;}
+
+.mob-menu {
+    float: none;
+    width: auto;
+    height: auto;
+    margin-right: 0;
+    display: block;
+    clear: none;
+}
+
+#top-nav {
+  float: right;
+  margin: 8px 0 0;
+  display: block !important; /* Used to force show nav on desktop even if resized from mobile view */
+}
+
+#top-nav a {
+  text-decoration: none;
+  display: inline;
+  padding: 0;
+  border-bottom: none;
+}
+
+#top-nav a:hover {background: transparent;}
+
+nav#top-nav li {
+    display: inline-block;
+    margin-left: 40px;
+    background: transparent;
+}
+
+nav#top-nav li a {
+    font-weight: 400;
+    text-decoration: none;
+}
+
+nav#top-nav li a:hover {
+    color:#7a77ff;
+}
+
+h1 {font-size: 6em;}
+
+.col4 {
+    width: 33.33333%;
+    padding-right: 20px;
+    float: left;
+}
+
+.col6 {
+    width: 50%;
+    padding-right: 10px;
+    float: left;
+}
+
+.col8 {
+    width: 66.66666%;
+    padding-right: 20px;
+    float: left;
+}
+
+.col4.last, .col6.last, .col8.last {padding-right: 0;}
+
+.shadow {box-shadow: 0px 0px 3px #888;}
+
+.front .hero {
+    background: #65ac0e;
+    height: 300px;
+    padding-top: 70px;
+}
+
+.front .hero h2 {font-size: 3em;}
+
+.front .hero p.big-text {font-size: 2.5em;}
+
+.highlight {background: #65ac0e; color: #ffffff; padding: 0.25em;}
+
+#right-sidebar {
+    padding-left: 40px;
+    border-left: solid 1px #ddd;
+    font-size: 0.75em;
+}
+
+}
+
+/* ////////////////////// Front page hero text break///////////////////////// */
+@media screen and (min-width: 1100px) {
+
+h2.big {font-size: 6em;}
+
+}
+
+/* ////////////////////// Top nav break ///////////////////////////////////// */
+
+@media screen and (min-width: 801px) and (max-width: 1140px) {
+
+nav#top-nav li {margin-left: 20px;}
+
+}
